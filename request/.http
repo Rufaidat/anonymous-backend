@@ -1,0 +1,36 @@
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "anon",
+    "password": "anon"
+}
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "username": "tom",
+    "password": "tom"
+}
+###
+
+POST http://localhost:3003/api/messages
+Content-Type: application/json
+
+
+{
+    "message":"adjust first",
+    "username": "tom"
+}
+###
+GET http://localhost:3003/api/users
+###
+GET http://localhost:3003/api/messages
+###
+PATCH  http://localhost:3003/api/users/anon
+Content-Type: application/json
+
+{
+    "username":"anon3"
+}
